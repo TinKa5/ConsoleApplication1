@@ -1,3 +1,4 @@
+Name;email;department;position;project;task;date;logged hours
 John Doe;john.doe@company.com;Delivery;Software Engineer;Mars;MRS-2240;2022-01-19;5 
 John Doe;john.doe@company.com;Delivery;Software Engineer;Mars;MRS-2240;2022-01-21;6
 John Doe;john.doe@company.com;Delivery;Software Engineer;Mars;MRS-2241;2019-02-20;8 

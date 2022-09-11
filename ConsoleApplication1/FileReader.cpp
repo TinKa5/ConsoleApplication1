@@ -10,6 +10,7 @@ using namespace std;
     
     if (myfile.is_open()){
         
+        getline(myfile, line);
         while (getline(myfile, line))
         {
             res.push_back(line);
