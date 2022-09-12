@@ -1,7 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-#include "Reader.h"
+#include "ReaderWriter.h"
 #include <vector>
 #include <iomanip>
 #include <map>
@@ -28,8 +28,8 @@ string modifyDate(string date) {
     tm tm = {};
     stringstream ss(date);
     ss >> get_time(&tm, "%Y-%m-%d");
-    std::ostringstream oss;
-    oss << std::put_time(&tm, "%B %Y");
+    ostringstream oss;
+    oss << put_time(&tm, "%B %Y");
     return oss.str();
 }
 
@@ -48,19 +48,19 @@ void addToMap(string name, string date, int amount, map<string, map<string, int>
 
 int main()
 {
-    std::cout << "Job is starting...\n";
+    cout << "Job is starting...\n";
 
-    std::vector<std::string> res1= READER::read("test1.txt");
+    vector<string> res1= READER_WRITER::read("test1.txt");
 
     map<string, map<string, int>> hours;
 
     for (auto const& element : res1) {
 
-        std::vector<std::string> lines = split(element, ';');        
+        vector<string> lines = split(element, ';');        
         
         addToMap(lines[0], modifyDate(lines[6]), stoi(lines[7]), hours);        
     }
     
-    if (READER::write("test2.csv", hours)) std::cout << "Sucsessfully complited.";
+    if (READER_WRITER::write("test2.csv", hours)) cout << "Sucsessfully complited.";
     return 0;    
 }

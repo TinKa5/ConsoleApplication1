@@ -18,12 +18,12 @@
     <ClCompile Include="ConsoleApplication1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FileReader.cpp">
+    <ClCompile Include="FileReaderWriter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Reader.h">
+    <ClInclude Include="ReaderWriter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
